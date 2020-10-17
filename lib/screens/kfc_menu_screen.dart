@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:parcel_app/widgets/main_drawer.dart';
 import 'package:provider/provider.dart';
 
 import '../screens/cart_screen.dart';
@@ -15,7 +16,7 @@ class KFCMenuScreen extends StatelessWidget {
     final menuData = Provider.of<KFCs>(context);
     final menus = menuData.items;
     return Scaffold(
-      drawer: Drawer(),
+      drawer: MainDrawer(),
       appBar: AppBar(
         iconTheme: new IconThemeData(
           color: Colors.black,
@@ -28,8 +29,8 @@ class KFCMenuScreen extends StatelessWidget {
             Text(
               'KFC',
               style: new TextStyle(
-                color: secondaryColor,
-                fontWeight: FontWeight.bold,
+                color: primaryColor,
+                // fontWeight: FontWeight.bold,
                 fontSize: 25,
                 fontFamily: 'Pacifico',
               ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:parcel_app/screens/orders_screen.dart';
 
 import '../Configuration/configuration.dart';
 
@@ -22,13 +23,12 @@ class MainDrawer extends StatelessWidget {
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
                       image: DecorationImage(
-                          image: AssetImage(
-                              'assets/images/IMG-20151126-WA0000.jpg'),
+                          image: AssetImage('assets/images/Me.jpg'),
                           fit: BoxFit.fill),
                     ),
                   ),
                   Text(
-                    'Shyla Sultana',
+                    'A. K. M. Mahbub Ullah',
                     style: TextStyle(
                         fontSize: 22,
                         color: Colors.white,
@@ -38,7 +38,7 @@ class MainDrawer extends StatelessWidget {
                     height: 4,
                   ),
                   Text(
-                    'shylasultana20@gmail.com',
+                    'MahbubShishir973@gmail.com',
                     style: TextStyle(color: Colors.white),
                   )
                 ],
@@ -52,6 +52,17 @@ class MainDrawer extends StatelessWidget {
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             onTap: () {},
+          ),
+          ListTile(
+            leading: Icon(Icons.payment, color: primaryColor),
+            title: Text(
+              'Orders',
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
+            onTap: () {
+              Navigator.of(context)
+                  .pushReplacementNamed(OrdersScreen.routeName);
+            },
           ),
           ListTile(
             leading: Icon(

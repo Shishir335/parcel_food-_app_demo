@@ -5,6 +5,7 @@ import '../screens/food_home_screen.dart';
 import '../screens/parcel_home_screen.dart';
 
 class CategorySelectionScreen extends StatelessWidget {
+  static const routeName = '/caregorySelection';
   Widget parcelLogo() {
     return Container(
       child: Text(

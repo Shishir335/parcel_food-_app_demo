@@ -22,8 +22,9 @@ class KFCMenuItem extends StatelessWidget {
   Widget build(BuildContext context) {
     final menu = Provider.of<KFC>(context, listen: false);
 
-    return GestureDetector(
+    return InkWell(
       onTap: () {
+        final menu = Provider.of<KFC>(context, listen: false);
         final cart = Provider.of<Cart>(context, listen: false);
         cart.addItem(
           menu.id,
@@ -43,20 +44,20 @@ class KFCMenuItem extends StatelessWidget {
                     Text(
                       menu.recipeName,
                       style: TextStyle(
-                        fontSize: 20,
+                        fontSize: 18,
                         fontWeight: FontWeight.bold,
                         color: thirdColor,
                       ),
                     ),
                     SizedBox(
-                      height: 5,
+                      height: 3,
                     ),
                     Padding(
                       padding: const EdgeInsets.only(bottom: 6),
                       child: Text(
                         menu.description,
                         style: TextStyle(
-                          fontSize: 14,
+                          fontSize: 10,
                           fontWeight: FontWeight.w500,
                           color: secondaryColor,
                           fontFamily: 'OpenSans',

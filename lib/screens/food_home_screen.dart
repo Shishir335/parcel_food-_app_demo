@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:parcel_app/widgets/main_drawer.dart';
 
 import '../widgets/tab_menu.dart';
 import '../Configuration/configuration.dart';
@@ -10,7 +11,7 @@ class FoodHomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: Drawer(),
+      drawer: MainDrawer(),
       appBar: AppBar(
         iconTheme: new IconThemeData(
           color: Colors.black,
@@ -105,7 +106,7 @@ class ResturentCard extends StatelessWidget {
         child: Column(
           children: [
             Container(
-              height: 250,
+              height: 200,
               width: double.infinity,
               decoration: BoxDecoration(
                 image: new DecorationImage(
@@ -147,7 +148,7 @@ class ResturentCard extends StatelessWidget {
                     Text(
                       resturentNmae,
                       style: TextStyle(
-                        fontSize: 27,
+                        fontSize: 20,
                         fontFamily: 'OpenSans',
                         fontWeight: FontWeight.bold,
                         color: Colors.blue,
@@ -156,7 +157,7 @@ class ResturentCard extends StatelessWidget {
                     Text(
                       description,
                       style: TextStyle(
-                        fontSize: 16,
+                        fontSize: 11,
                         fontFamily: 'OpenSans',
                         fontWeight: FontWeight.w600,
                         fontStyle: FontStyle.italic,
